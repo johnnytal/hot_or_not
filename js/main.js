@@ -65,7 +65,8 @@ gameMain.prototype = {
 
     	elements = [option1Img, option2Img, choose_button, drag, swipe_l, swipe_r];
     	
-    	initPlugIns();
+	    try{window.plugins.insomnia.keepAwake();} catch(e){} // keep awake
+    	try{StatusBar.hide();} catch(e){} // hide status bar
     },
     update: function(){
     	if (notChosen){
@@ -108,9 +109,4 @@ function choose(_what){
 			}, 2750);
 		}, this);
 	}, 200);
-}
-
-function initPlugIns(){
-    try{window.plugins.insomnia.keepAwake();} catch(e){} // keep awake
-    try{StatusBar.hide();} catch(e){} // hide status bar
 }

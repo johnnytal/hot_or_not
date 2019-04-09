@@ -13,7 +13,6 @@ function start(){
     game.state.add("Boot", boot);
     game.state.add("Preloader", preloader);
     game.state.add("Game", gameMain);
-    game.state.add("End", gameEnd);
     
     game.state.start("Boot");  
 }
@@ -47,8 +46,6 @@ boot.prototype = {
 
             this.scale.maxWidth = window.innerWidth * window.devicePixelRatio;
             this.scale.maxHeight = window.innerHeight * window.devicePixelRatio;
-            
-            this.scale.forceOrientation(true, false);
         }
 
         game.state.start('Preloader');
