@@ -88,7 +88,8 @@ function choose(_what){
 	notChosen = false;
 	choose_button.inputEnabled = false;
 	
-	questionText.text = 'You chose ' +  _what.key + ',\nThanks for your vote!';
+	questionText.font = '22px';
+	questionText.text = 'You chose ' +  _what.key + ',\nThanks for your vote!\n\nTap screen to try again';
 	questionText.x = game.world.centerX - questionText.width / 2;
 
 	setTimeout(function(){
@@ -105,8 +106,11 @@ function choose(_what){
 		
 		FOtween.onComplete.add(function(){
 			setTimeout(function(){
-				this.game.state.start("Game");
-			}, 2750);
+				_what.inputEnabled = true;
+				_what.events.onInputDown.add(function(){
+		        	game.state.start("Game");
+		        }, this);  
+			}, 1000);
 		}, this);
 	}, 200);
 }
