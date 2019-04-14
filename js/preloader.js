@@ -8,7 +8,7 @@ preloader.prototype = {
         this.game.load.image('swipe_r', "assets/images/swipe_r.png");
         this.game.load.image('swipe_l', "assets/images/swipe_l.png");
         this.game.load.image('red', "assets/images/red.png");
-        this.game.load.image('green', "assets/images/green.png");
+        this.game.load.image('blue', "assets/images/blue.png");
     },
     
     create: function(){

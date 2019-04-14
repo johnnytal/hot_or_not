@@ -18,7 +18,7 @@ gameMain.prototype = {
         option1Img.x = option1Img.width - 40;
     	option1Img.y = game.world.centerY - option1Img.height / 2 + 25;
 
-        option2Img = this.add.image(0, 0, 'green');
+        option2Img = this.add.image(0, 0, 'blue');
         option2Img.anchor.set(.5,.5);
         option2Img.x = WIDTH - option2Img.width + 40;
     	option2Img.y = game.world.centerY - option2Img.height / 2 + 25;
